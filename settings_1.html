@@ -1,0 +1,240 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="switch.css">    
+        <style>
+            body{
+                background-color: #edecfa;
+            }
+            img{
+                border: 1px solid;
+                max-width: 100%;
+                max-height: 100%;
+            }
+            .topbar{
+                width: 100%;
+                height: 5vh;
+                background-color: black;
+            }
+            .sidebar{
+                width: 20%;
+                height: 100vh;
+                float: left;
+                background-color: darkgrey;
+            }
+            .container{
+                display: grid;
+                float: right;
+                grid-template-columns: repeat(14,1fr);
+                grid-template-rows: repeat(12,1fr);
+                grid-gap: 0px;
+                width: 80%;
+                height: 95vh;
+            }
+            .profilepic{
+                padding: 10px 25px;
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 1;
+                grid-row-end: 4;
+            }
+            .inp{
+                grid-column-start: 4;
+                grid-column-end: 15;
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
+            .prim{
+                grid-column-start: 4;
+                grid-column-end: 9;
+                grid-row-start: 2;
+                grid-row-end: 4;
+                margin-right: 5px;
+            }
+            
+            .secon{
+                grid-column-start: 9;
+                grid-column-end: 15;
+                grid-row-start: 2;
+                grid-row-end: 4;
+                margin-left: 5px;
+            }
+            .calendar{
+                padding: 10px 30px;
+                grid-column-start: 8;
+                grid-column-end: 15;
+                grid-row-start: 4;
+                grid-row-end: 13;
+            }
+            .theme{
+                padding-left: 20px;
+                grid-column-start: 1;
+                grid-column-end: 8;
+                grid-row-start: 4;
+                grid-row-end: 5;
+            }
+            .eoa{
+                padding-left: 20px;
+                grid-column-start: 1;
+                grid-column-end: 8;
+                grid-row-start: 5;
+                grid-row-end: 8;
+            }
+            .notif{
+                padding-left: 20px;
+                grid-column-start: 1;
+                grid-column-end: 8;
+                grid-row-start: 8;
+                grid-row-end: 11;
+            }
+            .other{
+                padding-left: 20px;
+                grid-column-start: 1;
+                grid-column-end: 8;
+                grid-row-start: 11;
+                grid-row-end: 13;
+            }
+            ul{
+                list-style-type: none;
+            }
+            table th,td{
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="topbar"></div>
+        <div class="sidebar"></div>
+        <div class="container">
+            <div class="profilepic">
+                <img src="FB_IMG_1604496209599.jpg">
+            </div>
+            <div class="inp">
+                <h3 style="text-align: center;background-color: antiquewhite">PROFILE SETTINGS</h3>
+            </div>
+            <div class="prim">
+                
+                <table style="text-align: left">
+                    <tr>
+                        <th style="width: 200px">USERNAME: </th>
+                        <td><input value="Minari123" readonly="readonly"></td>
+                    </tr>
+                     <tr>
+                        <th>FIRST NAME: </th>
+                        <td><input value="Minari" readonly="readonly"></td>
+                    </tr>
+                     <tr>
+                        <th>LAST NAME: </th>
+                        <td><input value="myou" readonly="readonly"></td>
+                    </tr>
+                     <tr>
+                        <th>EMAIL ADDRESS: </th>
+                        <td><input value="Mi****@g***l.com" readonly="readonly"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="secon">
+            
+                <table style="text-align: left">
+                    <tr>
+                        <th style="width: 300px">CONTACT NUMBER: </th>
+                        <td><input value="09**6*****5" readonly="readonly"></td>
+                    </tr>
+                     <tr>
+                        <th>TIME ZONE: </th>
+                        <td>UTC/GMT +9</td>
+                    </tr>
+                     <tr>
+                        <th>ACCOUNT TYPE</th>
+                        <td style="background-color: yellow;width: 150px">CUSTOMER</td>
+                    </tr>
+                </table>
+                <div><button onclck="" style="height: 20px;width: 80px;float: right;margin-right: 20px;margin-top: 10px">Edit profile</button></div>
+            </div>
+            <div class="theme">
+                <label><b>Theme</b></label><br>
+                <label class="switch" style="float:left">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <label style="float: left;margin-left: 10px;">Dark mode</label>
+            </div>
+            <div class="eoa">
+                <table>
+                    <tr><th style="text-align: left">Ease of access</th></tr>
+                    <tr>
+                        <td style="padding-left: 20px;width: 180px">Colorblind mode</td>
+                        <td>
+                            <label class="switch" style="float:left">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </td>
+                    </tr>
+                        <tr>
+                        <td style="padding-left: 20px">Font size</td>
+                        <td>
+                            <input type="number" value="11" min="8" style="text-align: left; background-color: transparent;border: none;width: 50px;">    
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px">Font color</td>
+                        <td>
+                            <select style="width: 90px">
+                                <option>Black</option>
+                                <option>Blue</option>
+                                <option>Red</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px">Sort type</td>
+                        <td>
+                            <select style="width: 90px">
+                                <option>Price</option>
+                                <option>Name</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px">Language</td>
+                        <td>
+                            <select style="width: 90px">
+                                <option>English UK</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="notif">
+                <label><b>Notifications</b></label><br>
+                <label style="float:left; margin: 0 20px">Get notifications</label>
+                <label class="switch" style="float:left">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label><br>
+                <table style="margin-left: 20px">
+                    <tr></tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>ŒwÊä0ÌY £ äÜÕ äÜÕÆe²qF™ü £ </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>…¦@‹!  :¢?l  ÂoóÍ÷Öl1   €@  </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td> @@ýä’S°±n%    pCl8Q  ðBl8QC     </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>w#6øŠ  |’G    PCG    ýä’S</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="other">
+            </div>
+            <div class="calendar"><h1 style="text-align: center;margin-top: 40%">INSERT CALENDAR HERE!</h1></div>
+        </div>
+    </body>
+</html>
